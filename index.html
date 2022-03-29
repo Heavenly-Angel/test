@@ -9,9 +9,9 @@
 const xmlhttp = new XMLHttpRequest();
 xmlhttp.onload = function() {
   const myObj = JSON.parse(this.responseText);
-  document.getElementById("demo").innerHTML = myObj;
+  document.getElementById("demo").innerHTML = myObj.age;
 }
-xmlhttp.open("GET", "https://eclipsepublicapi.azurewebsites.net/EclipseData/GetReadings?DeploymentName=Tacoma&LatestNHours=1&API_KEY=5DC5D3CE-CC03-432B-B6B3-8F8B2E744232");
+xmlhttp.open("GET", "json_text.json");
 xmlhttp.send();
 </script>
 
